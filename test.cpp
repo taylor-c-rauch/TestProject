@@ -173,18 +173,24 @@ void process(vector<string> vec){
 
 int main(){
   //vector strings should be of the form "Letter1->Letter2"
+  
+  //Test 1: Given a list of A, B, C, and D, where C depends on A, D depends on B, and A depends on B, find the proper order.
   vector<string> test1;
   test1.push_back("A->C");
   test1.push_back("B->D");
   test1.push_back("B->A");
   process(test1);
+  //output is B A C D
 
+  //Test 2: Given the same list above, check that your algorithm holds when A depends on C, D on A, and B on D
   vector<string> test2;
   test2.push_back("C->A");
   test2.push_back("A->D");
   test2.push_back("D->B");
   process(test2);
+  //output is C A D B
 
+  //Test 3: Solve for: A->B, A->D, B->C, B->E, C->D, C->E
   vector<string> test3;
   test3.push_back("A->B");
   test3.push_back("A->D");
@@ -193,13 +199,16 @@ int main(){
   test3.push_back("C->D");
   test3.push_back("C->E");
   process(test3);
+  //output is A B C D E 
 
+  //Test 4: Testing output with circular dependencies
   vector<string> test4;
   test4.push_back("A->B");
   test4.push_back("B->C");
   test4.push_back("C->D");
   test4.push_back("D->A");
   process(test4);
+  //output is A B C D
   
   return 0;
 }
