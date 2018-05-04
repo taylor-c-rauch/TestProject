@@ -19,4 +19,4 @@ Bonus Points implemented:
  Language: C++
   
 Overview:
-  In order to solve this problem, I treated the articles as vertices in a graph and implemented a topological sort, to print out the letters associated with the letters in the correct order.
+  In order to solve this problem, I treated the articles as vertices in a graph and implemented a topological sort, to print out the letters associated with the articles in the correct order.
